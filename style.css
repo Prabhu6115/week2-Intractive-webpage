@@ -1,0 +1,167 @@
+/* ---------- Reset ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------- Theme Colors ---------- */
+:root {
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --text: #222;
+  --primary: #4f46e5;
+  --border: #ddd;
+}
+
+body.dark {
+  --bg: #121212;
+  --card: #1e1e1e;
+  --text: #ffffff;
+  --primary: #818cf8;
+  --border: #333;
+}
+
+/* ---------- Base ---------- */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+/* ---------- App Container ---------- */
+.app-container {
+  background: var(--card);
+  width: 100%;
+  max-width: 480px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* ---------- Header ---------- */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.app-header h1 {
+  font-size: 1.4rem;
+}
+
+#themeToggle {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+/* ---------- Form ---------- */
+.task-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.task-form input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-size: 0.95rem;
+}
+
+.task-form button {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  background: var(--primary);
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* ---------- Filters ---------- */
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.filters button {
+  flex: 1;
+  margin: 0 3px;
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: transparent;
+  cursor: pointer;
+}
+
+.filters button.active {
+  background: var(--primary);
+  color: white;
+  border: none;
+}
+
+/* ---------- Task List ---------- */
+.task-list {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.task-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+  gap: 8px;
+}
+
+.task-list li.completed span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.task-list span {
+  flex: 1;
+  cursor: pointer;
+}
+
+.task-list button {
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+/* ---------- Stats ---------- */
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.stats div {
+  background: var(--bg);
+  padding: 8px;
+  border-radius: 8px;
+  width: 30%;
+}
+
+.stats span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
